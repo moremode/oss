@@ -1,0 +1,9 @@
+[Unit]
+Description=PONPONPON
+After=sshd.service
+
+[Service]
+ExecStart=/usr/bin/printf "PONPONPON"
+
+[Install]
+WantedBy=multi-user.target

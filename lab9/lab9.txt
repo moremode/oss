@@ -1,0 +1,55 @@
+    1  ps xaf
+    2  ps xawf -eo pid,user,cgroup,args
+    3  systemd-cgls
+    4  ll /usr/lib/systemd/system/
+    5  ll /run/systemd/system/
+    6  ll /etc/systemd/system/
+    7  systemctl -t help
+    8  systemctl status
+    9  systemctl --type=service
+   10  systemctl status auditd.service
+   11  systemctl is-active auditd.service
+   12  systemctl is-enabled auditd.service
+   13  systemctl list-dependencies --after auditd.service
+   14  systemctl list-dependencies --before auditd.service
+   15  systemctl list-units --type=service
+   16  systemctl list-units --type=service --all
+   17  systemctl list-units --type=socket --all
+   18  systemctl list-unit-files --type=service
+   19  systemctl --failed --type=service
+   20  systemctl status httpd.service
+   21  systemctl start httpd.service
+   22  systemctl restart httpd.service
+   23  systemctl status httpd.service
+   24  systemctl stop httpd.service
+   25  systemctl enable httpd.service
+   26  systemctl status httpd.service
+   27  systemctl start httpd.service
+   28  systemctl status httpd.service
+   29  systemctl disable httpd.service
+   30  systemctl mask httpd.service
+   31  systemctl status httpd.service
+   32  systemctl start httpd.service
+   33  systemctl list-units --type=target
+   34  systemctl list-units --type=target --all
+   35  systemctl get-default
+   36  ll /etc/systemd/system/default.target
+   37  systemctl set-default multi-user.target
+   38  systemctl isolate multi-user.target
+   39  systemctl --no-wall rescue
+   40  systemctl --no-wall emergency
+   41  systemctl poweroff
+   42  systemctl halt
+   43  systemctl --no-wall poweroff
+   44  shutdown --poweroff 13:37
+   45  shutdown --halt +17
+   46  shutdown -c
+   47  systemctl --no-wall reboot
+   48  systemctl suspend
+   49  systemctl hibernate
+   50  systemctl default
+   51  hostnamectl
+   52  timedatectl
+   53  localectl
+   54  loginctl
+   55  history > lab9.txt
